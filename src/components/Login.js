@@ -1,9 +1,10 @@
 import { FaLongArrowAltRight } from "react-icons/fa";
-import login from "../assests/login.png";
+import loginImg from "../assests/login.png"
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
-    <div className="h-screen flex justify-center items-center bg-slate-200">
+    <div className="h-screen flex justify-center items-center bg-purple-100">
       <div className="flex w-[70%] h-[80%] border-2 bg-white">
 
         <div className="flex justify-center items-center w-2/3">
@@ -17,7 +18,7 @@ const Login = () => {
             </div>
             <button className="text-purple-900 border-2 px-10 rounded-3xl h-10 flex justify-center items-center w-48 bg-purple-400">Login</button>
             <button className="text-purple-900 flex justify-center items-center gap-x-2">
-              Create account
+              <Link to="./signIn">Create account</Link>
               <FaLongArrowAltRight className="mt-1"/>
               </button>
           </div>
@@ -25,7 +26,7 @@ const Login = () => {
 
         <div className="flex justify-center items-center w-1/3 bg-purple-500">
           <div className="">
-            <img src={login} alt="login" />
+            <img src={loginImg} alt="login" />
           </div>
         </div>
 

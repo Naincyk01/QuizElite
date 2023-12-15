@@ -1,6 +1,7 @@
 import { Outlet,RouterProvider,createBrowserRouter } from 'react-router-dom';
 import Login from "../src/components/Login"
 import './App.css';
+import Signin from './components/Signin';
 const AppLayout = () => {
   return (
     <div className="bg-black h-screen w-full">
@@ -14,8 +15,12 @@ const appRouter = createBrowserRouter([
     element:<AppLayout/>,
     children:[
       {
-        path:"/",
+        path:"",
         element:<Login/>
+      },
+      {
+        path:"signIn",
+        element:<Signin/>
       },
     ]
   }
