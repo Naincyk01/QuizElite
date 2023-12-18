@@ -1,8 +1,20 @@
 import { FaLongArrowAltRight } from "react-icons/fa";
 import loginImg from "../assests/login.png"
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useState } from "react";
 
 const Login = () => {
+
+  
+  const details = useSelector(store => store.signData.details);
+  const [name, setName] = useState(null);
+  const [password, setPassword] = useState(null);
+
+  const handleLogin = () => {
+    console.log(details)
+  };
+
   return (
     <div className="h-screen flex justify-center items-center bg-purple-100">
       <div className="flex w-[70%] h-[80%] border-2 bg-white">
@@ -13,10 +25,13 @@ const Login = () => {
               User Login
             </div>
             <div className="flex flex-col gap-y-8">
-              <input className="text-purple-900 px-2 rounded-2xl h-[37px] w-[250px] border-2 font-semibold" placeholder="Email"/>
-              <input className="px-2 text-purple-800 rounded-2xl h-[37px] w-[250px] font-medium border-2" placeholder="password"/>
+              <input className="text-purple-900 px-2 rounded-2xl h-[37px] w-[250px] border-2 font-semibold" placeholder="Email"
+               onChange={(e) => setName(e.target.value)}/>
+              <input className="px-2 text-purple-800 rounded-2xl h-[37px] w-[250px] font-medium border-2" placeholder="password"
+               onChange={(e) => setPassword(e.target.value)}/>
             </div>
-            <button className="text-purple-900 border-2 px-10 rounded-3xl h-10 flex justify-center items-center w-48 bg-purple-400">Login</button>
+            <button className="text-purple-900 border-2 px-10 rounded-3xl h-10 flex justify-center items-center w-48 bg-purple-400"
+            onClick={handleLogin}>Login</button>
             <button className="text-purple-900 flex justify-center items-center gap-x-2">
               <Link to="./signIn">Create account</Link>
               <FaLongArrowAltRight className="mt-1"/>

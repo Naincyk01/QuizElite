@@ -1,10 +1,11 @@
  import { createSlice } from "@reduxjs/toolkit";
 
-const SignSlice = createSlice({
+ const SignSlice = createSlice({
     name:'signData',
     initialState:{
         name:'',
         password:'',
+        details:[],
     },
 
     reducers:{
@@ -14,8 +15,11 @@ const SignSlice = createSlice({
         storePassword:(state, action)=>{
             state.password = action.payload;
         },
+        storeDetails:(state, action) => {
+            state.details.push(action.payload)
+        }
     }
 })
 
-export const {storeName, storePassword} = SignSlice.actions;
+export const {storeDetails} = SignSlice.actions;
 export default SignSlice.reducer; 

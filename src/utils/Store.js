@@ -5,7 +5,6 @@ import SignSlice from "./SignSlice"
 const Store = configureStore ({
     reducer : {
         signData : SignSlice,
-        
     }
 })
 

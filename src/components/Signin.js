@@ -1,8 +1,8 @@
 import React from 'react';
 import login from "../assests/login.png";
-import { useDispatch} from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { storeName,storePassword } from '../utils/SignSlice';
+import { storeDetails } from '../utils/SignSlice';
 import { Link } from 'react-router-dom';
 
 
@@ -15,8 +15,7 @@ const Signin = () => {
   const [text, setText] = useState('SIGN IN')
 
   const handleLoginDetails = () => {
-    dispatch(storeName(name))
-    dispatch(storePassword(password))
+    dispatch(storeDetails({name,password}))
 }
 
     return (
@@ -29,8 +28,8 @@ const Signin = () => {
                   SignIn
                 </div>
                 {isSignedUp!==false && name!==null && password!==null ? (<div className='w-full flex justify-center items-center h-9'>
-              heyyy! your is created now you can{'\u00A0'}
-              <Link to="/" className='text-black'>login</Link>{'\u00A0'}
+                 Your account has been created{'\u00A0'}
+              <Link to="/" className='text-black'>Login</Link>{'\u00A0'}
               to start
             </div>) : (null)}
                 <div className={`flex flex-col gap-y-8 ${visibility}`}>
@@ -39,15 +38,14 @@ const Signin = () => {
                   <input className="px-2 text-green-800 rounded-2xl h-[37px] w-[250px] font-medium border-2" placeholder="password"
                   onChange={(e)=>setPassword(e.target.value)}/>
                 </div>
-                <button className={`text-green-900 border-2 px-10 rounded-3xl h-10 flex justify-center items-center w-48 bg-green-400`}
+                <button className={`text-green-900 border-2 px-10 rounded-3xl h-10 flex justify-center items-center w-48 bg-green-400 ${visibility}`}
                  onClick = {()=> {handleLoginDetails()
                   if(name!==null && password!==null){
                     setIsSignedUp(true) 
                     setText('login')
                     setVisibility('hidden')
                 }
-                }}>{text}</button>
-               
+                }}>{text}</button> 
               </div>
             </div>
     
