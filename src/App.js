@@ -2,6 +2,7 @@ import { Outlet,RouterProvider,createBrowserRouter } from 'react-router-dom';
 import Login from "../src/components/Login"
 import './App.css';
 import Signin from './components/Signin';
+import Start from './components/Start';
 import { Provider } from 'react-redux';
 import Store from './utils/Store';
 
@@ -24,6 +25,10 @@ const appRouter = createBrowserRouter([
       {
         path:"signIn",
         element:<Signin/>
+      },
+      {
+        path:"start",
+        element:<Start/>
       },
     ]
   }
