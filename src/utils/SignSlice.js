@@ -3,17 +3,13 @@
  const SignSlice = createSlice({
     name:'signData',
     initialState:{
-        name:'',
-        password:'',
+        currentUser:'',
         details:[],
     },
 
     reducers:{
-        storeName:(state, action)=>{
-            state.name = action.payload;
-        },
-        storePassword:(state, action)=>{
-            state.password = action.payload;
+        storeCurrentuser:(state, action)=>{
+            state.currentUser = action.payload;
         },
         storeDetails:(state, action) => {
             state.details.push(action.payload)
@@ -21,5 +17,5 @@
     }
 })
 
-export const {storeDetails} = SignSlice.actions;
+export const {storeDetails,storeCurrentuser} = SignSlice.actions;
 export default SignSlice.reducer; 

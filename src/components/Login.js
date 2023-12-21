@@ -1,8 +1,9 @@
 import { FaLongArrowAltRight } from "react-icons/fa";
 import loginImg from "../assests/login.png"
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector,useDispatch } from "react-redux";
 import { useState,useEffect } from "react";
+import { storeCurrentuser } from "../utils/SignSlice";
 
 const Login = () => {
   const details = useSelector(store => store.signData.details);
@@ -10,7 +11,7 @@ const Login = () => {
   const [password, setPassword] = useState(null);
   const [isAuthenticated, setIsAuthenticated] = useState(null);
   const [visibility, setVisibility] = useState("hidden");
-  
+  const dispatch = useDispatch()
   const handleVisibility = () => {
     if (!isAuthenticated) {
       setVisibility("visible");
@@ -21,16 +22,16 @@ const Login = () => {
     details.find((x) => {
       if (x.name === name && x.password === password) {
         setIsAuthenticated("./start");
+        dispatch(storeCurrentuser({name,password}))
         return null;
       }
       return null;
     });
    };
 
-
-  useEffect(() => {
+   useEffect(() =>{
     handleLogin();
-  }, [name, password]);
+   }, [name, password]);
   
 
    return (
@@ -43,14 +44,14 @@ const Login = () => {
               User Login
             </div>
             <div className="flex flex-col gap-y-8">
-              <input className="text-purple-900 px-2 rounded-2xl h-[37px] w-[250px] border-2 font-semibold" placeholder="Email"
+              <input className="text-purple-900 px-2 rounded-2xl h-[37px] w-[250px] border-2 font-semibold" placeholder="Email/Username"
                onChange={(e) => setName(e.target.value)}/>
               <input className="px-2 text-purple-800 rounded-2xl h-[37px] w-[250px] font-medium border-2" placeholder="password"
                onChange={(e) => setPassword(e.target.value)}/>
             </div>
             <Link to={isAuthenticated}><button className="text-purple-900 border-2 px-10 rounded-3xl h-10 flex justify-center items-center w-48 bg-purple-400"
             onClick={() => handleVisibility()}>Login</button>
-</Link>
+             </Link>
             
              <div className={`${visibility} text-red-500`}>
               username of password is incorrect
@@ -58,7 +59,7 @@ const Login = () => {
             <button className="text-purple-900 flex justify-center items-center gap-x-2">
               <Link to="./signIn">Create account</Link>
               <FaLongArrowAltRight className="mt-1"/>
-              </button>
+            </button>
           </div>
         </div>
 

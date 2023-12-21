@@ -33,7 +33,7 @@ const Signin = () => {
               to start
             </div>) : (null)}
                 <div className={`flex flex-col gap-y-8 ${visibility}`}>
-                  <input className="text-green-900 px-2 rounded-2xl h-[37px] w-[250px] border-2 font-semibold" placeholder="Email"
+                  <input className="text-green-900 px-2 rounded-2xl h-[37px] w-[250px] border-2 font-semibold" placeholder="Email/Username"
                    onChange={(e)=>setName(e.target.value)}/>
                   <input className="px-2 text-green-800 rounded-2xl h-[37px] w-[250px] font-medium border-2" placeholder="password"
                   onChange={(e)=>setPassword(e.target.value)}/>
