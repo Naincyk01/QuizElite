@@ -5,6 +5,7 @@ import Signin from './components/Signin';
 import Start from './components/Start';
 import { Provider } from 'react-redux';
 import Store from './utils/Store';
+import { Ques } from './components/Ques';
 
 const AppLayout = () => {
   return (
@@ -29,6 +30,10 @@ const appRouter = createBrowserRouter([
       {
         path:"start",
         element:<Start/>
+      },
+      {
+        path:"ques",
+        element:<Ques/>
       },
     ]
   }
