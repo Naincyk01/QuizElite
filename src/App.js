@@ -33,7 +33,17 @@ const appRouter = createBrowserRouter([
       },
       {
         path:"ques",
-        element:<Ques/>
+        element:<Ques/>,
+        children:[
+          {
+            path:"/quiz",
+            element:<Question1/>,
+          },
+          {
+            path:"/quiz/question2",
+            element:<Question2/>,
+          }
+        ]
       },
     ]
   }

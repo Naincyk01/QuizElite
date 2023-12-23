@@ -1,7 +1,8 @@
-import React from 'react'
+import { Outlet } from 'react-router-dom'
 
-export const Ques = () => {
+const Ques = () => {
   return (
-    <div>Ques</div>
+   <Outlet/>
   )
 }
+export default Quiz;
