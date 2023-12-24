@@ -5,4 +5,4 @@ const Ques = () => {
    <Outlet/>
   )
 }
-export default Quiz;
+export default Ques;

@@ -1,10 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 const QuestionSlice = createSlice({
-    name:'questionsDetails',
+    name:'quesDetails',
     initialState:{
-        question1:1,
-        question2:3,
+        ques1:1,
+        ques2:3,
     },
 
 })

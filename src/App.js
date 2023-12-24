@@ -5,8 +5,9 @@ import Signin from './components/Signin';
 import Start from './components/Start';
 import { Provider } from 'react-redux';
 import Store from './utils/Store';
-import { Ques } from './components/Ques';
-
+import Ques from './components/Ques';
+import Ques1 from './components/Ques1';
+import Ques2 from './components/Ques2';
 const AppLayout = () => {
   return (
     <div className="bg-black h-screen w-full">
@@ -36,12 +37,12 @@ const appRouter = createBrowserRouter([
         element:<Ques/>,
         children:[
           {
-            path:"/quiz",
-            element:<Question1/>,
+            path:"/ques",
+            element:<Ques1/>,
           },
           {
-            path:"/quiz/question2",
-            element:<Question2/>,
+            path:"/ques/ques2",
+            element:<Ques2/>,
           }
         ]
       },
