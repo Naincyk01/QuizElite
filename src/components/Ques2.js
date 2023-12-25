@@ -1,8 +1,25 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 const Ques2 = () => {
+  const correct = useSelector(store =>store.quesDetails.ques2);
+  const dispatch = useDispatch();
+  const handleclick=(data)=>{
+ if(correct==data){
+  console.log("rightjbhjbvhj");
+}
+  };
   return (
-    <div className='text-white text-4xl'>Ques2nfjiuhiuj</div>
+    <div className='text-white flex flex-col justify-center items-center h-full w-screen gap-y-6'>
+      <div className='text-4xl'>   What is the most common surname in the United States?</div>
+      <div className='flex flex-col text-2xl'>
+      <Link to="/ques2" className='border-2 border-purple-800 px-2 m-2 bg-purple-500 rounded-md h-10' onClick={()=>handleclick(1)}>Jhon</Link>
+      <Link to="/ques2" className='border-2 border-purple-800 px-2 m-2 bg-purple-500 rounded-md h-10' onClick={()=>handleclick(2)}>Paul</Link>
+      <Link to="/ques2" className='border-2 border-purple-800 px-2 m-2 bg-purple-500 rounded-md h-10' onClick={()=>handleclick(3)}>Smith</Link>
+      <Link to="/ques2" className='border-2 border-purple-800 px-2 m-2 bg-purple-500 rounded-md h-10' onClick={()=>handleclick(4)}>Biden</Link>
+      </div>
+    </div>
   )
 }
 
