@@ -1,13 +1,14 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { increaseCount } from '../utils/ScoreSlice';
 
 const Ques2 = () => {
   const correct = useSelector(store =>store.quesDetails.ques2);
   const dispatch = useDispatch();
   const handleclick=(data)=>{
  if(correct==data){
-  console.log("rightjbhjbvhj");
+  dispatch(increaseCount());
 }
   };
   return (
