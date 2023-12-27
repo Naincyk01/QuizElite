@@ -8,6 +8,7 @@ import Store from './utils/Store';
 import Ques from './components/Ques';
 import Ques1 from './components/Ques1';
 import Ques2 from './components/Ques2';
+import Ques3 from './components/Ques3';
 const AppLayout = () => {
   return (
     <div className="bg-black h-screen w-full">
@@ -43,6 +44,10 @@ const appRouter = createBrowserRouter([
           {
             path:"/ques/ques2",
             element:<Ques2/>,
+          },
+          {
+            path:"/ques/ques3",
+            element:<Ques3/>,
           }
         ]
       },

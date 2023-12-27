@@ -5,6 +5,7 @@ const QuestionSlice = createSlice({
     initialState:{
         ques1:1,
         ques2:3,
+        ques3:2,
     },
 
 })
