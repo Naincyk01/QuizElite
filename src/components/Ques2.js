@@ -13,12 +13,12 @@ const Ques2 = () => {
   };
   return (
     <div className='text-white flex flex-col justify-center items-center h-full w-screen gap-y-6'>
-      <div className='text-4xl'>   What is the most common surname in the United States?</div>
+      <div className='text-4xl'>In which of the following state, the main language is Khasi?</div>
       <div className='flex flex-col text-2xl'>
-      <Link to="/ques/ques3" className='border-2 border-purple-800 px-2 m-2 bg-purple-500 rounded-md h-10' onClick={()=>handleclick(1)}>Jhon</Link>
-      <Link to="/ques/ques3" className='border-2 border-purple-800 px-2 m-2 bg-purple-500 rounded-md h-10' onClick={()=>handleclick(2)}>Paul</Link>
-      <Link to="/ques/ques3" className='border-2 border-purple-800 px-2 m-2 bg-purple-500 rounded-md h-10' onClick={()=>handleclick(3)}>Smith</Link>
-      <Link to="/ques/ques3" className='border-2 border-purple-800 px-2 m-2 bg-purple-500 rounded-md h-10' onClick={()=>handleclick(4)}>Biden</Link>
+      <Link to="/ques/ques3" className='border-2 border-purple-800 px-2 m-2 bg-purple-500 rounded-md h-10' onClick={()=>handleclick(1)}>Mizoram</Link>
+      <Link to="/ques/ques3" className='border-2 border-purple-800 px-2 m-2 bg-purple-500 rounded-md h-10' onClick={()=>handleclick(2)}>Nagaland</Link>
+      <Link to="/ques/ques3" className='border-2 border-purple-800 px-2 m-2 bg-purple-500 rounded-md h-10' onClick={()=>handleclick(3)}>Meghalaya</Link>
+      <Link to="/ques/ques3" className='border-2 border-purple-800 px-2 m-2 bg-purple-500 rounded-md h-10' onClick={()=>handleclick(4)}>Tripura</Link>
       </div>
     </div>
   )
