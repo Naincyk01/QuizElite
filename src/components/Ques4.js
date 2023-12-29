@@ -15,10 +15,10 @@ const Ques4 = () => {
     <div className='text-white flex flex-col justify-center items-center h-full w-screen gap-y-6'>
       <div className='text-4xl'>Which state has the largest area?</div>
       <div className='flex flex-col text-2xl'>
-      <Link to="/" className='border-2 border-purple-800 px-2 m-2 bg-purple-500 rounded-md h-10' onClick={()=>handleclick(1)}>Maharashtra</Link>
-      <Link to="/" className='border-2 border-purple-800 px-2 m-2 bg-purple-500 rounded-md h-10' onClick={()=>handleclick(2)}>Madhya Pradesh</Link>
-      <Link to="/" className='border-2 border-purple-800 px-2 m-2 bg-purple-500 rounded-md h-10' onClick={()=>handleclick(3)}>Uttar Pradesh</Link>
-      <Link to="/" className='border-2 border-purple-800 px-2 m-2 bg-purple-500 rounded-md h-10' onClick={()=>handleclick(4)}>Rajasthan</Link>
+      <Link to="/ques/ques5" className='border-2 border-purple-800 px-2 m-2 bg-purple-500 rounded-md h-10' onClick={()=>handleclick(1)}>Maharashtra</Link>
+      <Link to="/ques/ques5" className='border-2 border-purple-800 px-2 m-2 bg-purple-500 rounded-md h-10' onClick={()=>handleclick(2)}>Madhya Pradesh</Link>
+      <Link to="/ques/ques5" className='border-2 border-purple-800 px-2 m-2 bg-purple-500 rounded-md h-10' onClick={()=>handleclick(3)}>Uttar Pradesh</Link>
+      <Link to="/ques/ques5" className='border-2 border-purple-800 px-2 m-2 bg-purple-500 rounded-md h-10' onClick={()=>handleclick(4)}>Rajasthan</Link>
       </div>
     </div>
   )

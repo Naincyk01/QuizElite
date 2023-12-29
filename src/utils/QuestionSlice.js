@@ -7,6 +7,7 @@ const QuestionSlice = createSlice({
         ques2:3,
         ques3:2,
         ques4:4,
+        ques5:1,
     },
 
 })
