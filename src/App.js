@@ -24,7 +24,7 @@ const appRouter = createBrowserRouter([
     element:<AppLayout/>,
     children:[
       {
-        path:"/",
+        path:"",
         element:<Login/>
       },
       {
@@ -36,11 +36,11 @@ const appRouter = createBrowserRouter([
         element:<Start/>
       },
       {
-        path:"ques",
+        path:"/ques",
         element:<Ques/>,
         children:[
           {
-            path:"/ques",
+            path:"/ques/ques1",
             element:<Ques1/>,
           },
           {

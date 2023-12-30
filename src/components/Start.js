@@ -11,7 +11,7 @@ const Start = () => {
       <div className='text-6xl'>WELCOME</div>
       <div className='text-4xl capitalize tracking-wider'>{currentusername.name}</div>
      </div>
-     <Link to="/ques">Start the Quiz</Link>
+     <Link to="/ques/ques1">Start the Quiz</Link>
       </div>
   )
 }
