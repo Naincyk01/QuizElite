@@ -6,7 +6,7 @@ const Question = ({question,opt1,opt2,opt3,opt4,answer,link}) => {
   
   const dispatch = useDispatch();
   const handleclick = (data) => {
-    if (correct == data) {
+    if (answer == data) {
       dispatch(increaseCount());
     }
   };
