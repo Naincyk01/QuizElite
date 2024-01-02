@@ -37,10 +37,10 @@ const Login = () => {
     <div className="h-screen flex justify-center items-center bg-purple-100">
       <div
         className="flex w-[70%] h-[80%] border-2 bg-white max-lg:w-full max-lg:mx-12 max-md:flex-col 
-      max-md:items-center max-md:justify-center max-sm:mx-4 max-md:gap-y-8 max-md:h-auto max-md:py-12"
+      max-md:items-center max-md:justify-center max-sm:mx-4  max-md:h-auto max-md:py-12"
       >
         
-        <div className="flex justify-center items-center w-1/3 bg-purple-500 max-md:w-full">
+        <div className="flex justify-center items-center w-1/3 bg-purple-500  max-md:w-full">
           <div className="max-sm:w-60 max-sm:h-60">
             <img src={loginImg} alt="login" />
           </div>
