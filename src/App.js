@@ -11,6 +11,7 @@ import Ques2 from './components/Ques2';
 import Ques3 from './components/Ques3';
 import Ques4 from './components/Ques4';
 import Ques5 from './components/Ques5';
+import Last from './components/Last';
 const AppLayout = () => {
   return (
     <div className="bg-black h-screen w-full">
@@ -60,6 +61,10 @@ const appRouter = createBrowserRouter([
             element:<Ques5/>,
           }
         ]
+      },
+      {
+        path:"last",
+        element:<Last/>
       },
     ]
   }
