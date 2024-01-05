@@ -20,11 +20,20 @@ const Signin = () => {
 
     return (
         <div className="h-screen flex justify-center items-center bg-green-100">
-          <div className="flex w-[70%] h-[80%] border-2 bg-white">
+          <div className="flex w-[70%] h-[80%] border-2 bg-white max-lg:w-full max-lg:mx-12 max-md:flex-col 
+      max-md:items-center max-md:justify-center max-sm:mx-4 max-md:h-[95%] max-md:py-12">
     
-            <div className="flex justify-center items-center w-2/3">
+
+          <div className="flex justify-center items-center w-1/2 max-md:w-full">
+              <div className="bg-green-500 rounded-full w-80 h-80">
+                <img src={login} alt="login" />
+              </div>
+            </div>
+    
+
+            <div className="flex justify-center items-center w-1/2 max-md:w-full">
               <div className="flex flex-col w-[400px] h-[500px] gap-y-10 items-center justify-center">
-                <div className="text-green-900 font-bold text-xl">
+                <div className="text-green-900 text-2xl font-extrabold">
                   SignIn
                 </div>
                 {isSignedUp!==false && name!==null && password!==null ? (<div className='w-full flex justify-center items-center h-9'>
@@ -33,12 +42,12 @@ const Signin = () => {
               to start
             </div>) : (null)}
                 <div className={`flex flex-col gap-y-8 ${visibility}`}>
-                  <input className="text-green-900 px-2 rounded-2xl h-[37px] w-[250px] border-2 font-semibold" placeholder="Email/Username"
+                  <input className="text-green-900 px-2 rounded-full h-[46px] w-[250px] bg-gray-100 font-semibold" placeholder="Email/Username"
                    onChange={(e)=>setName(e.target.value)}/>
-                  <input className="px-2 text-green-800 rounded-2xl h-[37px] w-[250px] font-medium border-2" placeholder="password"
+                  <input className="px-2 text-green-900 rounded-full h-[46px] w-[250px] bg-gray-100 font-semibold" placeholder="Password"
                   onChange={(e)=>setPassword(e.target.value)}/>
                 </div>
-                <button className={`text-green-900 border-2 px-10 rounded-3xl h-10 flex justify-center items-center w-48 bg-green-400 ${visibility}`}
+                <button className={`text-green-900 border-2 px-10 rounded-3xl h-12 flex justify-center items-center w-52 bg-green-400 font-semibold text-xl ${visibility}`}
                  onClick = {()=> {handleLoginDetails()
                   if(name!==null && password!==null){
                     setIsSignedUp(true) 
@@ -48,12 +57,12 @@ const Signin = () => {
                 }}>{text}</button> 
               </div>
             </div>
-    
+{/*     
             <div className="flex justify-center items-center w-1/3 bg-green-500">
               <div className="">
                 <img src={login} alt="login" />
               </div>
-            </div>
+            </div> */}
     
           </div>
         </div>

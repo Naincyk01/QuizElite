@@ -37,7 +37,7 @@ const Login = () => {
     <div className="h-screen w-full flex justify-center items-center bg-purple-100">
       <div
         className="flex w-[70%] h-[80%] border-2 bg-white max-lg:w-full max-lg:mx-12 max-md:flex-col 
-      max-md:items-center max-md:justify-center max-sm:mx-4 max-md:h-auto max-md:py-12 border-purple-200 max-md:gap-y-6"
+      max-md:items-center max-md:justify-center max-sm:mx-4 max-md:h-[95%] max-md:py-12 border-purple-200"
       >
         
         <div className="flex justify-center items-center w-[50%] max-md:w-full">
@@ -56,7 +56,7 @@ const Login = () => {
                 onChange={(e) => setName(e.target.value)}
               />
               <input
-                className="px-2 text-purple-800 rounded-full h-[46px] w-[250px] bg-gray-100 font-medium"
+                className="px-2 text-purple-900 rounded-full h-[46px] w-[250px] bg-gray-100 font-semibold"
                 placeholder="Password"
                 onChange={(e) => setPassword(e.target.value)}
               />
