@@ -8,7 +8,7 @@ const Start = () => {
   return (
      <div className='bg-green-100 flex h-screen w-full justify-center items-center flex-col'>
      <div className='flex justify-center flex-col items-center font-extrabold'>
-      <div className='text-6xl'>WELCOME</div>
+      <div className='text-6xl flex max-sm:text-5xl'>WELCOME</div>
       <div className='text-4xl capitalize tracking-wider'>{currentusername.name}</div>
      </div>
      <Link to="/ques/ques1">Start the Quiz</Link>
