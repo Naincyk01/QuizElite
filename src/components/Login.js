@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
 import { storeCurrentuser } from "../utils/SignSlice";
+import { setAuthentication } from "../utils/AuthenticationSlice";
 
 const Login = () => {
   const details = useSelector((store) => store.signData.details);
@@ -23,6 +24,7 @@ const Login = () => {
       if (x.name === name && x.password === password) {
         setIsAuthenticated("./start");
         dispatch(storeCurrentuser({ name, password }));
+        dispatch(setAuthentication());
         return null;
       }
       return null;

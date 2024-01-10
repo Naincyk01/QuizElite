@@ -1,9 +1,14 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-
+import { Navigate } from "react-router-dom";
 const Start = () => {
   const currentusername = useSelector((store) => store.signData.currentUser);
+  const authStatus = useSelector((store) => store.authenticationDetails.isAuthenticated)
+
+  if(!authStatus){
+      return <Navigate to="/" replace />;
+  }
   return (
     <div className="bg-purple-100 flex h-screen w-full justify-center items-center">
       <div className="flex h-[80%] w-[70%] justify-center items-center flex-col bg-white border-2 border-purple-200 max-lg:w-full max-lg:mx-12">
