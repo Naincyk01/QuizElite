@@ -11,16 +11,16 @@ const Last = () => {
     return <Navigate to="/" replace />;
   }
   return (
-    <div className="text-white h-screen flex flex-col items-center justify-center gap-y-8">
-      <div className="w-80 h-80 rounded-full border-4 border-green-500 border-dashed flex items-center justify-center ">
+    <div className="text-purple-500 h-screen flex flex-col items-center justify-center gap-y-8 bg-purple-100">
+      <div className="w-80 h-80 rounded-full border-4 border-purple-600 border-dashed flex items-center justify-center ">
         <div
-          className="w-72 h-72 rounded-full border-8 border-white animate-pulse flex items-center justify-center font-bold
+          className="w-72 h-72 rounded-full border-8 border-purple-500 animate-pulse flex items-center justify-center font-bold
                 text-9xl"
         >
-          {"" + score}
+          {"" + score}/5
         </div>
       </div>
-      <div className="font-bold text-4xl">heyy! here are your score</div>
+      <div className="font-bold text-4xl">Your Score.........</div>
     </div>
   );
 };
