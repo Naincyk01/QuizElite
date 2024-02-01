@@ -13,7 +13,7 @@ const Question = ({question,opt1,opt2,opt3,opt4,answer,link}) => {
   return (
     <div className="text-white flex justify-center items-center h-screen w-full bg-purple-100">
       <div className="flex flex-col justify-center items-center w-2/3  h-[80%] gap-y-14">
-      <div className="text-3xl text-purple-800 font-semibold w-full h-32 flex justify-center items-center">{"" + question}</div>
+      <div className="text-3xl text-purple-800 font-semibold w-full h-32 flex justify-center items-center text-center">{"" + question}</div>
       <div className="flex flex-col text-xl">
         <Link
           to={link}

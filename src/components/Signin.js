@@ -36,10 +36,11 @@ const Signin = () => {
                 <div className="text-green-900 text-2xl font-extrabold">
                   SignIn
                 </div>
-                {isSignedUp!==false && name!==null && password!==null ? (<div className='w-full flex justify-center items-center h-9'>
-                 Your account has been created{'\u00A0'}
-              <Link to="/" className='text-black'>Login</Link>{'\u00A0'}
-              to start
+                {isSignedUp!==false && name!==null && password!==null ? (
+                <div className='w-full flex flex-col justify-center items-center h-[100px] gap-y-3'>
+                 <div className='text-green-900 text-xl font-semibold'>Your account has been created</div>
+                  <div className='text-green-900 text-xl font-semibold'>Login to start{'\u00A0'}{'\u00A0'}</div>
+              <Link to="/" className='text-green-900 text-2xl border w-12 text-center rounded-md bg-green-200'>→</Link>{'\u00A0'}
             </div>) : (null)}
                 <div className={`flex flex-col gap-y-8 ${visibility}`}>
                   <input className="text-green-900 px-2 rounded-full h-[46px] w-[250px] bg-gray-100 font-semibold" placeholder="Email/Username"
